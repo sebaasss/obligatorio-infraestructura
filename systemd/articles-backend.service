@@ -1,0 +1,18 @@
+[Unit]
+Description=Articles Platform Backend
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=articles
+WorkingDirectory=/opt/articles/backend
+EnvironmentFile=/opt/articles/backend/.env
+ExecStart=/usr/bin/node /opt/articles/backend/dist/server.js
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=articles-backend
+
+[Install]
+WantedBy=multi-user.target
