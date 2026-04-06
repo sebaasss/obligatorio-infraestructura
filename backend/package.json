@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Internal articles platform - backend",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "generate": "ts-node src/services/contentGeneratorService.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.470.0",
+    "@aws-sdk/lib-storage": "^3.470.0",
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "multer": "^2.1.1",
+    "mysql2": "^3.6.5",
+    "sequelize": "^6.35.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.10.0",
+    "@types/uuid": "^9.0.7",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.2"
+  }
+}
